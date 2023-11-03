@@ -6,6 +6,8 @@ import java.lang.reflect.Field;
 
 public interface InstanceMasterAPI {
 
+    public InstanceManager getInstanceManager();
+
     private static Plugin getClassPlugin(final Class<?> clazz) throws ClassNotFoundException, NoSuchFieldException, IllegalAccessException, ClassCastException {
         final Class<?> classPluginClassLoader = Class.forName("net.md_5.bungee.api.plugin.PluginClassloader");
         final ClassLoader classLoader = clazz.getClassLoader();
